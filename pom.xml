@@ -7,6 +7,9 @@
     <groupId>com.anything.dubbo</groupId>
     <artifactId>boot-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>basic-demo</module>
+    </modules>
     <packaging>pom</packaging>
 
     <name>dubbo-all</name>
@@ -17,6 +20,11 @@
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.SR1</spring-cloud.version>
         <spring-statemachine.version>2.0.1.RELEASE</spring-statemachine.version>
+        <dubbo.version>2.6.5</dubbo.version>
+        <zookeeper.version>3.4.9</zookeeper.version>
+        <netty.version>4.0.35.Final</netty.version>
+        <curator.version>4.0.1</curator.version>
+        <zkclient.version>0.10</zkclient.version>
     </properties>
 
     <dependencyManagement>
@@ -41,6 +49,34 @@
                 <version>Bismuth-RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-recipes -->
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-recipes</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.101tec/zkclient -->
+            <dependency>
+                <groupId>com.101tec</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
